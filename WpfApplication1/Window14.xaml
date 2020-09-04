@@ -59,6 +59,6 @@
         <Button Style="{StaticResource MyStyle1}">sssssssssssssss</Button>
         <Label Style="{StaticResource MyStyle2}" >dddddd</Label>
         <Label Style="{StaticResource MyStyle2}" >SSSSSSSSS</Label>
-        <Label Style="{StaticResource MyStyle2}" >SSSSSSывыыSSS</Label>
+        <Label Style="{StaticResource MyStyle2}" >SSSSsSSывыыSSS</Label>
     </StackPanel>
 </Window>
