@@ -1,0 +1,51 @@
+﻿<Window x:Class="WpfApplication1.Window9"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="Window9" Height="300" Width="300">
+    <StackPanel>
+        <Grid Background="White" Margin="30,30,30,30">
+            <!--TextBlock для текста по умолчанию
+                Foreground - Цвет шрифта для текста по умолчанию-->
+            <TextBlock x:Name="my_TextBlock" Foreground="LightGray" Margin="5,2" Text="Текст по умолчанию когда пустой TextBox...">
+                <TextBlock.Style>
+                    <!--Установка стиля-->
+                    <Style>
+
+                        <!-- По умолчанию - скрыть TextBlock -->
+                        <Setter Property="TextBlock.Visibility" Value="Hidden"/>
+
+                        <Style.Triggers>
+
+                            <!-- Показать TextBlock, если он пустой -->
+                            <DataTrigger Binding="{Binding Password, ElementName=my_TextBox}"  Value="">
+                                <Setter Property="TextBlock.Visibility" Value="Visible"></Setter>
+                            </DataTrigger>
+
+                            <!-- Показать TextBlock, если он Null -->
+                            <DataTrigger Binding="{Binding Password, ElementName=my_TextBox}"  Value="{x:Null}">
+                                <Setter Property="TextBlock.Visibility" Value="Visible"></Setter>
+                            </DataTrigger>
+
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+
+            <!-- TextBox для ввода -->
+            <PasswordBox Name="my_TextBox" Background="{x:Null}"/>
+
+        </Grid>
+        <Button Click="Button_Click">dddd</Button>
+        <Grid>
+            <TextBlock Name="tbProba">sdfsdfdsfsd</TextBlock>
+            <TextBox Name="pbProba"></TextBox>
+        </Grid>
+    </StackPanel>
+    <!--Общий контейнер визуально объединяющий TextBlock и TextBox
+            Background - Цвет фона-->
+    
+</Window>

@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfApplication1.Window13"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="Window13" Height="500" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        </Grid.Resources>
+        <TextBlock Grid.Row="0" x:Name="tblHint" FontSize="18" Width="300" FontFamily="Rubik" VerticalAlignment="Center"
+            Text="Login" Foreground="Green"/>
+        <TextBox Grid.Row="0" Name="tbLogin" FontSize="18" Width="300" FontFamily="Rubik" 
+            VerticalAlignment="Center" Foreground="Blue" Background="{x:Null}" TextChanged="tbLogin_TextChanged"/>
+        <TextBlock Grid.Row="1" x:Name="tblHintPas" FontSize="18" Width="300" FontFamily="Rubik" VerticalAlignment="Center"
+            Text="Password" Foreground="Green" TextInput="tblHintPas_TextInput" KeyDown="tblHintPas_KeyDown"/>
+        <PasswordBox Grid.Row="1" Name="pbLoginPas" FontSize="18" Width="300" FontFamily="Rubik" 
+            VerticalAlignment="Center" Foreground="Blue" Background="{x:Null}" PasswordChanged="pbLoginPas_PasswordChanged"/>
+        <TextBlock Grid.Row="2"  Name="tblPasw"></TextBlock>
+        <TextBlock Grid.Row="3" x:Name="textBlock2" FontSize="18" Width="300" FontFamily="Rubik" VerticalAlignment="Center"
+                                   Text="Password" Foreground="Red"
+                       Visibility="{Binding Password.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}, ElementName=tbPassword}" />
+        <PasswordBox Grid.Row="3" Name="tbPassword" FontSize="18" Width="300" FontFamily="Rubik" 
+                                 VerticalAlignment="Center" Foreground="Black" Background="{x:Null}"/>
+        <Image Grid.Row="4" Source="pack://application,,,/ClassLibrary1;component/BotImage.png"></Image>
+    </Grid>
+</Window>

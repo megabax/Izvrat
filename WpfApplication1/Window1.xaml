@@ -1,0 +1,14 @@
+﻿<Window x:Class="Windows.ModernWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="ModernWindow" Height="300" Width="300"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="CanResizeWithGrip">
+    <Border Width="Auto" Height="Auto" Name="windowFrame"
+    
+          BorderBrush="#395984"
+          BorderThickness="1"
+          CornerRadius="0,20,30,40" >
+
+    </Border>
+</Window>

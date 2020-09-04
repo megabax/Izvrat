@@ -1,0 +1,15 @@
+﻿<Window x:Class="WpfApplication1.Window6"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="Window6" Height="300" Width="300">
+    <Canvas>
+        <TextBox Width="100" Canvas.Top="30" Canvas.Left="20"></TextBox>
+        <TextBox Width="100" Canvas.Top="100" Canvas.Left="30" Drop="TextBox_Drop" AllowDrop="True" DragEnter="TextBox_DragEnter"/>
+        <Label Canvas.Top="140" Canvas.Left="30" MouseDown="Label_MouseDown">Это метка</Label>
+        <Label Canvas.Top="60" Canvas.Left="150" AllowDrop="True" DragEnter="Label_DragEnter" Drop="Label_Drop" Name="lb1">Lheufz vtnrf</Label>
+    </Canvas>
+</Window>
